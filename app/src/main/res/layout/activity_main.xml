@@ -1,18 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.view.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="10dp"
+    android:background="@color/black"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/music_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background_rectangle"
+        android:scaleType="centerInside"
+        android:src="@drawable/album_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space" />
+
+    <TextView
+        android:id="@+id/music_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/raleway_medium"
+        android:gravity="center_horizontal"
+        android:text="@string/music_text"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_icon" />
+
+    <TextView
+        android:id="@+id/music_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:text="@string/music_text_1"
+        android:textColor="@color/grey_text"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/auth_btn_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_text" />
+
+    <ImageView
+        android:id="@+id/btn_background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/auth_btns_background_rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_text_1" />
+
+    <LinearLayout
+        android:id="@+id/auth_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/btn_background"
+        app:layout_constraintTop_toBottomOf="@id/music_text_1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            style="@style/auth_btn_style"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/auth_button_shape"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/btn_background"
+            app:layout_constraintTop_toTopOf="@id/btn_background" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signup_btn"
+            style="@style/auth_btn_style"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/auth_button_shape"
+            android:fontFamily="@font/raleway_medium"
+            android:text="SignUp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textAlignment="gravity"
+            app:layout_constraintStart_toEndOf="@id/login_btn"
+            app:layout_constraintTop_toTopOf="@id/btn_background" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@id/btn_background"
+        app:layout_constraintStart_toStartOf="@id/btn_background"
+        app:layout_constraintTop_toBottomOf="@id/btn_background" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</RelativeLayout>

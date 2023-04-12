@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<ScrollView-->
+<!--    -->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.view.SignUpFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id = "@+id/username_edit_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="username"
+                android:inputType="textPersonName"
+                android:maxLength="100"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id = "@+id/email_edit_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="email"
+                android:inputType="textWebEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            app:endIconMode="password_toggle"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password_edit_field"
+                android:inputType="textPassword"
+                android:hint="password"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/confirm_password"-->
+<!--            app:endIconMode="password_toggle"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"-->
+<!--            app:boxBackgroundColor="@color/white">-->
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/confirm_password_edit_field"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:hint="confirm password"/>-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/address"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id = "@+id/address_edit_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLength="50"
+                android:hint="address"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phonenumber"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id = "@+id/phone_edit_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="phone number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_of_birth"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id = "@+id/dob_edit_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:hint="date of birth"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signup_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:cornerRadius="5dp"
+            android:text="Signup"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/primary_color"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password" />
+
+    </LinearLayout>
