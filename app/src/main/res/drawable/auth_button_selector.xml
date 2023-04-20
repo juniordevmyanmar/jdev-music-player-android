@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- pressed and focused state -->
-    <item android:state_pressed="true" >
+    <!-- selected state -->
+    <item android:state_selected="true" >
         <shape android:shape="rectangle">
             <solid android:color="@color/white"/>
             <corners android:radius="8dp"/>
@@ -10,8 +10,13 @@
     </item>
 
     <!-- normal shape -->
-    <solid android:color="@color/primary_color"/>
-    <corners android:radius="8dp"/>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/primary_color"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
 
 </selector>
 

@@ -13,9 +13,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:background="@color/black"
-    >
+    android:padding="10dp">
 
     <Space
         android:id="@+id/space"
@@ -89,35 +87,31 @@
         app:layout_constraintStart_toStartOf="@id/btn_background"
         app:layout_constraintTop_toBottomOf="@id/music_text_1">
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login_btn"
-            style="@style/auth_btn_style"
             android:layout_width="0dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="10dp"
+            android:layout_height="40dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:background="@drawable/auth_button_shape"
+            android:background="@drawable/auth_button_selector"
             android:fontFamily="@font/raleway_medium"
             android:text="Login"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="10sp"
             android:textStyle="bold"
-            android:textAlignment="center"
             app:layout_constraintStart_toStartOf="@id/btn_background"
             app:layout_constraintTop_toTopOf="@id/btn_background" />
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signup_btn"
-            style="@style/auth_btn_style"
             android:layout_width="0dp"
-            android:layout_height="35dp"
+            android:layout_height="40dp"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:background="@drawable/auth_button_shape"
+            android:background="@drawable/auth_button_selector"
             android:fontFamily="@font/raleway_medium"
             android:text="SignUp"
             android:textAllCaps="false"
